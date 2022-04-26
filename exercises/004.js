@@ -28,6 +28,11 @@ Starter Code
 */
 
 function listAllValues(obj) {
-  // your code here
-
+  const valueArray = [];
+  for (const key in obj) {
+    if (Object.hasOwnProperty.call(obj, key)) {
+      valueArray.push(obj[key]);
+    }
+  }
+  return valueArray;
 }
