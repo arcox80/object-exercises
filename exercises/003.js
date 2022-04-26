@@ -20,6 +20,9 @@ Starter Code:
 */
 
 function fromListToObject(array) {
-  // your code here
-
+  const returnObj = {};
+  for (let i = 0; i < array.length; i += 1) {
+    returnObj[array[i][0]] = array[i][1];
+  }
+  return returnObj;
 }
