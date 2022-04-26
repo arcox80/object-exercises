@@ -22,5 +22,15 @@ Starter Code:
 */
 
 function convertObjectToList(obj) {
-  // your code here
+  const outerArr = [];
+  for (const key in obj) {
+    const innerArr = [];
+    if (Object.hasOwnProperty.call(obj, key)) {
+      const element = obj[key];
+      innerArr.push(key);
+      innerArr.push(element);
+    }
+    outerArr.push(innerArr);
+  }
+  return outerArr;
 }
